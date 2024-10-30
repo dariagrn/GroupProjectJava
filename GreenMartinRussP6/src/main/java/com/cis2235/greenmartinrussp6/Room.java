@@ -5,4 +5,6 @@
 package com.cis2235.greenmartinrussp6;
 
 public class Room {
+    public Room(String name, String decoration) {
+    }
 }

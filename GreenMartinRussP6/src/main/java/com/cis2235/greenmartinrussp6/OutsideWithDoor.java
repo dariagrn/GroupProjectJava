@@ -6,10 +6,12 @@ package com.cis2235.greenmartinrussp6;
 
 public class OutsideWithDoor extends Outside implements HasExteriorDoor{
 
-
+    //create variables for the doorDescription and door location
+    String doorDescription;
     public OutsideWithDoor(String name, boolean hot, String doorDescription){
 
         super(name, hot);
+        this.doorDescription=doorDescription;
 
     }
 
@@ -26,5 +28,10 @@ public class OutsideWithDoor extends Outside implements HasExteriorDoor{
     @Override
     public void setDoorLocation(Location location) {
 
+    }
+    public String getDescription(){
+
+
+        return getDescription();
     }
 }
