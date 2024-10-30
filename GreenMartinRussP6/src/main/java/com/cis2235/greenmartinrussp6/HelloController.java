@@ -14,6 +14,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
+import javax.swing.*;
+
 public class HelloController
 {
     private final ObservableList<String> cmbList = FXCollections.observableArrayList
@@ -57,7 +59,21 @@ public class HelloController
     @FXML
     void onActionExitGame(ActionEvent event) {
 
+        int exitTheGame= JOptionPane.showConfirmDialog(null, "Are you sure you want to leave?", "Close window", JOptionPane.YES_NO_OPTION);
+
+        if (exitTheGame == JOptionPane.YES_OPTION) {
+
+            System.exit(0);
+        }
+
     }
+
+
+
+
+
+
+
 
     @FXML
     void onActionGoHere(ActionEvent event) {
@@ -87,6 +103,14 @@ public class HelloController
         btnGoThroughDoor.setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
         btnCheckCloset.setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
         btnExitTheGame.setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
+    }
+
+    //JR
+    public void  initialize(){
+
+        cmbExits.setItems(cmbList);
+
+
     }
 
 }
