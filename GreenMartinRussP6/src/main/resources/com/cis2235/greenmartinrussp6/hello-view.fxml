@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: C2E5DF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cis2235.greenmartinrussp6.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="719.0" style="-fx-background-color: C2E5DF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cis2235.greenmartinrussp6.HelloController">
    <children>
       <Label fx:id="lblWelcomeText" alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="-2.0" prefHeight="35.0" prefWidth="707.0" style="-fx-background-color: FFFFFF;" text="Welcome to Java Hide &amp; Seek game! Press Hide to Begin the Game" textAlignment="CENTER">
          <font>
@@ -17,15 +17,16 @@
          </font>
       </Label>
       <TextArea fx:id="txtbGameSummary" editable="false" layoutX="6.0" layoutY="337.0" prefHeight="164.0" prefWidth="243.0" />
-      <Button fx:id="btnGoHere" layoutX="275.0" layoutY="336.0" mnemonicParsing="false" onAction="#onActionGoHere" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Go Here -&gt;" />
-      <Button fx:id="btnGoThroughDoor" layoutX="275.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionGoThroughDoor" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Go Through the Door" />
-      <Button fx:id="btnCheckCloset" layoutX="453.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionCheckCloset" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Check Inside the Closet" />
-      <Button fx:id="btnExitTheGame" layoutX="275.0" layoutY="453.0" mnemonicParsing="false" onAction="#onActionExitGame" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Exit The Game" />
-      <ComboBox fx:id="cmbExits" layoutX="453.0" layoutY="336.0" onAction="#onActionComboBoxEvent" prefWidth="150.0" promptText="Dining Room" />
+      <Button fx:id="btnGoHere" layoutX="275.0" layoutY="374.0" mnemonicParsing="false" onAction="#onActionGoHere" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Go Here -&gt;" />
+      <Button fx:id="btnGoThroughDoor" layoutX="275.0" layoutY="432.0" mnemonicParsing="false" onAction="#onActionGoThroughDoor" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Go Through the Door" />
+      <Button fx:id="btnCheckCloset" layoutX="453.0" layoutY="432.0" mnemonicParsing="false" onAction="#onActionCheckCloset" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Check Inside the Closet" />
+      <Button fx:id="btnExitTheGame" layoutX="360.0" layoutY="486.0" mnemonicParsing="false" onAction="#onActionExitGame" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Exit The Game" />
+      <ComboBox fx:id="cmbExits" layoutX="453.0" layoutY="374.0" onAction="#onActionComboBoxEvent" prefWidth="150.0" promptText="Dining Room" />
       <ImageView fx:id="ivGameMap" fitHeight="284.0" fitWidth="544.0" layoutX="67.0" layoutY="46.0">
          <image>
             <Image url="@../../../house.png" />
          </image>
       </ImageView>
+      <Button fx:id="btnHide" layoutX="360.0" layoutY="337.0" mnemonicParsing="false" onAction="#onActionGoHere" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="25.0" prefWidth="143.0" text="Hide" />
    </children>
 </AnchorPane>

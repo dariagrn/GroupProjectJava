@@ -1,6 +1,7 @@
 //stewart Martin
 // smartin91@cnm.edu
 //class OutsideWithHidingPlace
+//JR made the variables, methods, constructor
 
 package com.cis2235.greenmartinrussp6;
 
@@ -17,13 +18,9 @@ public class OutsideWithHidingPlace extends Outside implements IsHidingPlace{
     }
 
 
-
-
-
-
     //getDescription this creates the description
+    @Override
     public String getDescription(){
-
 
         return getDescription();
 

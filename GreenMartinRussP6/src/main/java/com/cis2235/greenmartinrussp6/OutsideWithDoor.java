@@ -1,7 +1,7 @@
 //stewart martin
 // smartin91@cnm.edu
 // class outSideWithDoor
-
+// JR made the variables, methods, constructor.
 package com.cis2235.greenmartinrussp6;
 
 public class OutsideWithDoor extends Outside implements HasExteriorDoor{
@@ -20,18 +20,21 @@ public class OutsideWithDoor extends Outside implements HasExteriorDoor{
         return "";
     }
 
+
+
     @Override
     public Location getDoorLocation() {
         return null;
     }
 
-    @Override
+    //@Override
     public void setDoorLocation(Location location) {
 
     }
+
+
+    @Override
     public String getDescription(){
-
-
-        return getDescription();
+        return doorDescription;
     }
 }

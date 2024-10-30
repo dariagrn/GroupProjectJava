@@ -1,6 +1,7 @@
 //stewart martin
 // smartin91@cnm.edu
 // HasExteriorDoor interface
+//JR made the variables, methods
 
 package com.cis2235.greenmartinrussp6;
 

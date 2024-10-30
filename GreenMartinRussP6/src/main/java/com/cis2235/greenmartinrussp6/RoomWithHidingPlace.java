@@ -1,8 +1,10 @@
-//stewart Martin
-//smartin91@cnm.edu
-//class RoomWithHidingPlace
+
+//stewart Martin made the class
+//JR made the variables, methods, constructor
 
 package com.cis2235.greenmartinrussp6;
+
+
 
 public class RoomWithHidingPlace extends Room implements IsHidingPlace {
 
@@ -25,11 +27,12 @@ public class RoomWithHidingPlace extends Room implements IsHidingPlace {
 
 
 
-
+    @Override
+    //the superclass is in Room.  That is where the method is made
     public String  getDescription() {
 
-
         return description;
+
     }
 
 

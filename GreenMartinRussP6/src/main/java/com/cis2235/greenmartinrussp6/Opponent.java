@@ -1,7 +1,7 @@
 //stewart Martin
 //smartin91@cnm.edu
 //class Opponent
-
+//JR made the variables, methods, constructor
 
 package com.cis2235.greenmartinrussp6;
 
@@ -14,11 +14,16 @@ public class Opponent {
     public Opponent(Location startingLocation) {
 
         random  = new Random();
-        myLocation=startingLocation;
+        this.myLocation=startingLocation;
 
     }
 
     //getter for location that returns myLocation
+    public Location getMyLocation() {
+
+        return myLocation;
+
+    }
 
 
     public void move(){
