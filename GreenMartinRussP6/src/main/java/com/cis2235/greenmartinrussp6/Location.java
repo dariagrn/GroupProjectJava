@@ -33,4 +33,7 @@ public class Location {
         return description;
     }
 
+    public Location[] getExits() {
+        return new Location[0];
+    }
 }

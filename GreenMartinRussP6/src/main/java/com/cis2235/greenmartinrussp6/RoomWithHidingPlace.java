@@ -33,7 +33,7 @@ public class RoomWithHidingPlace extends Room implements IsHidingPlace {
     //the superclass is in Room.  That is where the method is made
     public String  getDescription() {
 
-        return description;
+        return super.getDescription() + " You can hide in the " + hidingPlaceName + ".";
 
     }
 

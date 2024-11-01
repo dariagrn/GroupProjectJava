@@ -5,10 +5,32 @@
 
 package com.cis2235.greenmartinrussp6;
 
-public abstract class Outside {
+public class Outside extends Location{
+
+    boolean hot;
 
     public Outside(String name, boolean hot) {
+        super(name);
+        this.hot=hot;
+
     }
 
-    public abstract String getDescription();
+    // Getter for hot
+    public boolean isHot() {
+        return hot;
+    }
+
+    // Override getDescription to include temperature details
+    @Override
+    public String getDescription() {
+        String description = super.getDescription();
+        if (hot) {
+            description += " It's very hot.";
+        }
+        return description;
+    }
+
+
+
+
 }

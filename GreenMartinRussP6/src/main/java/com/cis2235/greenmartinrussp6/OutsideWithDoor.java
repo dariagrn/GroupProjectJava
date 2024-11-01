@@ -31,12 +31,13 @@ public class OutsideWithDoor extends Outside implements HasExteriorDoor {
 
     @Override
     public void setDoorLocation(Location location) {
+        this.doorLocation = location;
 
     }
 
     @Override
     public String getDescription() {
-        return "";
+        return super.getDescription()+"The door descripton is" +doorDescription;
     }
 
 }

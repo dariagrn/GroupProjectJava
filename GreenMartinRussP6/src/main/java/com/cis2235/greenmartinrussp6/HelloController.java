@@ -81,6 +81,13 @@ public class HelloController
     @FXML
     void onActionHide(ActionEvent event) {
 
+//        boolean firstClick=true;
+//        if (firstClick) {
+//            txtbGameSummary.clear();
+//            firstClick = false;  // Update flag after the first click
+//        }
+
+
 
     }
 
@@ -220,7 +227,7 @@ public class HelloController
         cmbExits.setItems(cmbList);
 
         //
-        txtbGameSummary.appendText("The house has four “rooms” on the lower floor, the stairs, " +
+        txtbGameSummary.setText("The house has four “rooms” on the lower floor, the stairs, " +
                 "\na living room, a dining room and a kitchen. Upstairs, it has four “rooms”, " +
                 "\nthe hall, the master bedroom, the second bedroom and the bathroom.\n" +
                 "The living room has a door to the front yard and the kitchen has a door to the back yard.");
