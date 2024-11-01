@@ -8,12 +8,12 @@ package com.cis2235.greenmartinrussp6;
 import java.util.Random;
 
 public class Opponent {
-    private Random random;
+    private Random random=new Random();
     private Location myLocation;
 
     public Opponent(Location startingLocation) {
 
-        random  = new Random();
+
         this.myLocation=startingLocation;
 
     }
@@ -26,41 +26,54 @@ public class Opponent {
     }
 
 
-    public void move(){
-        //checks to see if th current room has a door
-            //if there is a door, Opponent has  a  50% chance of going through it.
-            //Then opponent moves to a random location and keeps going until a hiding place is found.
+    public boolean check(Location locationToCheck){
+            //checking if myLocation is the same as loctionToCheck
+            if(myLocation==locationToCheck){
+                return true;
 
-        if(myLocation instanceof HasExteriorDoor){
-            HasExteriorDoor locationWithDoor=(HasExteriorDoor)myLocation;
-
-            //get a roandom number that  will give you 50% chance
-            //create  a boolean
-            //cif the answer is true, then move
-            myLocation  = locationWithDoor.getDoorLocation();
-
-
-
-        }
-        //create a bool for hidden =false;
-        //start a while loop while not hidden
-            //get a rand_num depending on the myLocation.exits.length
-            //set myLocation to myLocation.exits[rand_num]
-            //check if myLocation is an instance of IsHidingPlace
-            //if it is, hidden =true and loop ends
-
-//        public boolean check(Location locationToCheck){
-//            //checking if myLocation is the same as loctionToCheck
-//                //if it is return true else false
-//            return false;
-//
-//
-//
-//        }
-
-
+            }else
+            {
+                //if it is return true else false
+                return false;
+            }
 
     }
 
+
+    public void move() {
+        while (true) {
+
+
+            //checks to see if th current room has a door
+            if (myLocation instanceof HasExteriorDoor) {
+
+                //if there is a door, Opponent has  a  50% chance of going through it.
+                //Then opponent moves to a random location and keeps going until a hiding place is found.
+                HasExteriorDoor locationWithDoor = (HasExteriorDoor) myLocation;
+                myLocation = locationWithDoor.getDoorLocation();
+
+                //get a roandom number that  will give you 50% chance.
+                // create  a boolean
+                boolean openDoor=random.nextBoolean();
+                //if the answer is true, then move
+                if(openDoor==true){
+
+                    myLocation = locationWithDoor.getDoorLocation();
+                }
+
+            }
+            else {
+                // Pick a random location from the available exits
+                Location[] exits = myLocation.getExits();
+                myLocation = exits[random.nextInt(exits.length)];
+            }
+            // Stop if the new location has a hiding place
+            if (myLocation instanceof IsHidingPlace) {
+                break;
+            }
+
+        }
+
+    }
 
 }

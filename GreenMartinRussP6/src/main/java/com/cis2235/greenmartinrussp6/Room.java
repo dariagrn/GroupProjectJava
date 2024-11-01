@@ -5,21 +5,27 @@
 
 package com.cis2235.greenmartinrussp6;
 
-public abstract class Room {
+public class Room  extends Location{
 
     private String decoration;
     private  String description;
 
 
     public Room(String name, String decoration) {
+        super(name);
+         this.decoration = decoration;
+    }
 
-         this.description =( "You see " + decoration + ". ");
+    // Getter for decoration
+    public String getDecoration() {
+        return decoration;
     }
 
 
+    @Override
     public String  getDescription(){
 
-        return description;
+        return super.getDescription() + " You see " + decoration + ".";
 
 
     }

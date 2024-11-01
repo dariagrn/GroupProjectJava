@@ -18,7 +18,6 @@ public class RoomWithDoor extends RoomWithHidingPlace implements HasExteriorDoor
 
         //assign doorDescription to class variable
         this.doorDescription = doorDescription;
-        this.doorLocation = doorLocation;
 
     }
 
@@ -34,7 +33,12 @@ public class RoomWithDoor extends RoomWithHidingPlace implements HasExteriorDoor
 
 
     public void setDoorLocation(Location location) {
+        this.doorLocation = location;
 
+    }
+    @Override
+    public String getDescription() {
+        return super.getDescription() + " There is a door " + doorDescription + ".";
     }
 
 
