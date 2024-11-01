@@ -7,6 +7,7 @@ package com.cis2235.greenmartinrussp6;
 
 public class OutsideWithHidingPlace extends Outside implements IsHidingPlace{
 
+    private String description;
 
     //Constructor
     public OutsideWithHidingPlace(String name, boolean hot,  String hidingPlaceName) {
@@ -15,6 +16,7 @@ public class OutsideWithHidingPlace extends Outside implements IsHidingPlace{
         super(name, hot);
 
         //assign argument to member variable
+
     }
 
 
@@ -22,7 +24,7 @@ public class OutsideWithHidingPlace extends Outside implements IsHidingPlace{
     @Override
     public String getDescription(){
 
-        return getDescription();
+        return description;
 
     }
 

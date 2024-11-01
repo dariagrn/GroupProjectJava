@@ -13,6 +13,7 @@ public class RoomWithDoor extends RoomWithHidingPlace implements HasExteriorDoor
 
 
     public RoomWithDoor(String name, String decoration, String hidingPlaceName, String doorDescription) {
+
         super(name, decoration, hidingPlaceName);
 
         //assign doorDescription to class variable

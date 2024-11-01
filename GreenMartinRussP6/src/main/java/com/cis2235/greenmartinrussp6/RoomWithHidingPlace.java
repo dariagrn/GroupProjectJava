@@ -17,11 +17,13 @@ public class RoomWithHidingPlace extends Room implements IsHidingPlace {
         super(name,decoration);
         this.hidingPlaceName=hidingPlaceName;
 
+
     }
 
 
     @Override
     public String getHidingPlaceName() {
+
         return hidingPlaceName;
     }
 

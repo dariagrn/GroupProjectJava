@@ -8,12 +8,19 @@ package com.cis2235.greenmartinrussp6;
 public abstract class Room {
 
     private String decoration;
+    private  String description;
+
 
     public Room(String name, String decoration) {
 
-        String description =( "You see " + decoration + ". ");
+         this.description =( "You see " + decoration + ". ");
     }
 
 
-    public abstract String  getDescription();
+    public String  getDescription(){
+
+        return description;
+
+
+    }
 }

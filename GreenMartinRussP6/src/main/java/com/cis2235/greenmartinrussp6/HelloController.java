@@ -1,3 +1,11 @@
+
+
+
+
+//Daria: created the hello-view controller
+
+
+
 package com.cis2235.greenmartinrussp6;
 
 import javafx.collections.FXCollections;
@@ -16,6 +24,8 @@ import javafx.scene.text.FontWeight;
 
 import javax.swing.*;
 
+import static java.lang.Thread.sleep;
+
 public class HelloController
 {
     //keep track of how many moves were taken
@@ -26,6 +36,9 @@ public class HelloController
 
     //Opponent object to keep track of opponent
     Opponent opponentObject;
+
+    //RoomWithDoor object to see if a room is there
+    RoomWithDoor roomWithDoorObject;
 
     //Object references to keep track of each of the rooms in the house
 
@@ -58,10 +71,11 @@ public class HelloController
     private TextArea txtbGameSummary;
 
     @FXML
-    private Button btnHide;
+    private Button btnHide;//JR added  this
 
     @FXML
     void onActionCheckCloset(ActionEvent event) {
+        txtbGameSummary.appendText("\rYou checked the closet...\n");
 
     }
 
@@ -77,7 +91,7 @@ public class HelloController
 
         if (exitTheGame == JOptionPane.YES_OPTION) {
 
-            System.exit(0);
+           System.exit(0);
         }
 
     }
@@ -85,11 +99,27 @@ public class HelloController
 
     @FXML
     void onActionGoHere(ActionEvent event) {
+        //if the user doesn't select a place to go it won't count it
+        if(cmbExits.getValue()!=null){
+            txtbGameSummary.appendText("\rYou went to"+cmbExits.getValue()+"\n");
+            howManyMovesTaken++;
+            txtbGameSummary.appendText("\ryou  used "+howManyMovesTaken+" moves\n");
+
+        }
+
+
 
     }
 
     @FXML
     void onActionGoThroughDoor(ActionEvent event) {
+
+        txtbGameSummary.appendText("\rYou went through a door\n");
+
+        //if(roomWithDoorObject!=null){}  needs a check to see if a door exist so it can be counted properly
+        howManyMovesTaken++;
+        txtbGameSummary.appendText("\ryou  used "+howManyMovesTaken+" moves\n");
+
 
     }
 
@@ -126,7 +156,7 @@ public class HelloController
 //       Instantiate the classes and pass information about each room to each constructor
 
 /*   	Populate the exits array for each room.  We have to do this after we create
-        all of the instances because we are going to refer to them.  This is instantiating the array
+        all of the instances, because we are going to refer to them.  This is instantiating the array
         declared in the Location class, public Location[] exits;  exits is an array of Locations that this location connects to.*/
 
 

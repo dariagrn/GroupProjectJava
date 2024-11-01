@@ -1,7 +1,7 @@
 //stewart martin
 // smartin91@cnm.edu
 //location class
-//JR made the variables, methods, constructorr
+//JR made the variables, methods, constructor
 package com.cis2235.greenmartinrussp6;
 
 public class Location {
@@ -10,6 +10,7 @@ public class Location {
 
     public Location(String name){
         this.name = name;
+        this.description = getDescription();
     }
 
     public Location[] exits;    //exits is an array of Locations that this location connects to

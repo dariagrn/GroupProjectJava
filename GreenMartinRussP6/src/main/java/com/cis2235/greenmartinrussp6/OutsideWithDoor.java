@@ -4,37 +4,39 @@
 // JR made the variables, methods, constructor.
 package com.cis2235.greenmartinrussp6;
 
-public class OutsideWithDoor extends Outside implements HasExteriorDoor{
+public class OutsideWithDoor extends Outside implements HasExteriorDoor {
 
     //create variables for the doorDescription and door location
-    String doorDescription;
-    public OutsideWithDoor(String name, boolean hot, String doorDescription){
+    private String doorDescription;
+    private Location doorLocation;
+
+
+    public OutsideWithDoor(String name, boolean hot, String doorDescription) {
 
         super(name, hot);
-        this.doorDescription=doorDescription;
+        this.doorDescription = doorDescription;
 
     }
 
     @Override
     public String getDoorDescription() {
-        return "";
+        return doorDescription;
     }
-
 
 
     @Override
     public Location getDoorLocation() {
-        return null;
+        return doorLocation;
     }
 
-    //@Override
+    @Override
     public void setDoorLocation(Location location) {
 
     }
 
-
     @Override
-    public String getDescription(){
-        return doorDescription;
+    public String getDescription() {
+        return "";
     }
+
 }
