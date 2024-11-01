@@ -70,11 +70,25 @@ public class HelloController
     @FXML
     private TextArea txtbGameSummary;
 
+
     @FXML
     private Button btnHide;//JR added  this
 
+
+
+
+
+    @FXML
+    void onActionHide(ActionEvent event) {
+
+
+    }
+
+
     @FXML
     void onActionCheckCloset(ActionEvent event) {
+
+        //needs a check to see if a closet exist so it can be counted properly
         txtbGameSummary.appendText("\rYou checked the closet...\n");
 
     }
@@ -106,7 +120,6 @@ public class HelloController
             txtbGameSummary.appendText("\ryou  used "+howManyMovesTaken+" moves\n");
 
         }
-
 
 
     }
@@ -205,6 +218,12 @@ public class HelloController
         //call createObjects
         createObjects();
         cmbExits.setItems(cmbList);
+
+        //
+        txtbGameSummary.appendText("The house has four “rooms” on the lower floor, the stairs, " +
+                "\na living room, a dining room and a kitchen. Upstairs, it has four “rooms”, " +
+                "\nthe hall, the master bedroom, the second bedroom and the bathroom.\n" +
+                "The living room has a door to the front yard and the kitchen has a door to the back yard.");
 
         //Instantiate the opponent object and make the initial location the front yard.
         //Call resetGame(false);
